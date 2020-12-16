@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # class for the BlogsController
 class BlogsController < ApplicationController
   before_action :set_blog, only: %i[show edit update destroy toggle_status]
@@ -6,11 +8,14 @@ class BlogsController < ApplicationController
   # GET /blogs.json
   def index
     @blogs = Blog.all
+    @page_title = 'DevkcBlogs'
   end
 
   # GET /blogs/1
   # GET /blogs/1.json
-  def show; end
+  def show
+    @page_title = @blog.title
+  end
 
   # GET /blogs/new
   def new

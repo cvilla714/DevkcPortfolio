@@ -1,6 +1,9 @@
+# frozen_string_literal: true
+
 class PortfoliosController < ApplicationController
   def index
     @portfolios_items = Portfolio.all
+    @page_title = 'DevkcPortolios'
     # @portfolios_items = Portfolio.angular
     # @portfolios_items = Portfolio.ruby_on_rails_portfolio_items
     # @portfolios_items = Portfolio.where(subtitle: 'Angular')
