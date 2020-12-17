@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class PagesController < ApplicationController
   def home
     @posts = Blog.all
@@ -5,7 +7,11 @@ class PagesController < ApplicationController
     @portfolios = Portfolio.all
   end
 
-  def about; end
+  def about
+    @page_title = 'AboutDevkc'
+  end
 
-  def contact; end
+  def contact
+    @page_title = 'ContactDevkc'
+  end
 end
