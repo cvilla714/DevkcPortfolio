@@ -3,7 +3,7 @@
 # class for the BlogsController
 class BlogsController < ApplicationController
   before_action :set_blog, only: %i[show edit update destroy toggle_status]
-
+  layout 'blogs'
   # GET /blogs
   # GET /blogs.json
   def index
