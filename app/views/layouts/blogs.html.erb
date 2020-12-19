@@ -21,10 +21,16 @@
       <%= link_to 'Sign In',new_user_session_path%>
       <%= link_to 'Register',new_user_registration_path%>
     <% end%>
+
     <%= yield %>
+
     <%= render 'shared/nav' ,location:'bottom' %>
+
+    <%= login_helper %>
+    
     <% if session[:source]%>
     Thanks for visiting me from <%= session[:source] %>
     <% end %>
+
   </body>
 </html>
