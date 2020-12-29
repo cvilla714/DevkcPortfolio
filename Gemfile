@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 source 'https://rubygems.org'
 gem 'rubocop', '~>0.81.0'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
@@ -46,4 +48,6 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'devise', '~> 4.7', '>= 4.7.3'
 gem 'friendly_id', '~> 5.4.0'
+gem 'hirb', '~> 0.7.3'
+gem 'petergate', '~> 2.0', '>= 2.0.1'
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
