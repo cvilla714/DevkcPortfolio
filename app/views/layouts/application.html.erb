@@ -12,12 +12,12 @@
   </head>
 
   <body>
-    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column text-center">
         <%= render 'shared/application_nav' %>
         <h1>Hi, <%= current_user.first_name %></h1>
-          <%= login_helper %>
           <%= yield %>
           <%= source_helper("application") %>
-    </div>
+          <%= render 'shared/application_footer' %>
+     </div>
   </body>
 </html>
