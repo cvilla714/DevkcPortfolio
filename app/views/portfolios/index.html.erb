@@ -1,15 +1,5 @@
 <h1>Portolio Items</h1>
 
-<a href="portfolios/new">Create a new portfolio</a>
+<%= link_to "create a new portfolio ", new_portfolio_path if logged_in?(:site_admin) %>
 
-<%= link_to "2nd choice to create the link", new_portfolio_path %>
-
-<p>
-<%= new_portfolio_path %>
-</p>
-
-<p>
-<%= new_portfolio_url %>
-</p>
-
-<%= render partial: 'portfolio_item',collection: @portfolios_items %>
+<%= render partial: 'portfolio_item',collection: @portfolios_items  %>
