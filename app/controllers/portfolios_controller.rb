@@ -1,6 +1,9 @@
 # frozen_string_literal: true
 
 class PortfoliosController < ApplicationController
+  before_action :set_portfolios_items, only: %i[edit show update destroy]
+  # layout 'portfolio'
+  access all: %i[show index], user: { except: %i[destroy new edit update edit create] }, site_admin: :all
   def index
     @portfolios_items = Portfolio.all
     @page_title = 'DevkcPortolios'
@@ -45,13 +48,9 @@ class PortfoliosController < ApplicationController
   end
 
   #   def udpate
-  def edit
-    @portfolios_items = Portfolio.find(params[:id])
-  end
+  def edit; end
 
   def update
-    @portfolios_items = Portfolio.find(params[:id])
-
     respond_to do |format|
       # if @portfolios_items.update(params.require(:portfolio).permit(:title, :subtitle, :body))
       if @portfolios_items.update(portfolio_params)
@@ -64,13 +63,10 @@ class PortfoliosController < ApplicationController
     end
   end
 
-  def show
-    @portfolios_items = Portfolio.find(params[:id])
-  end
+  def show; end
 
   def destroy
     # this will perform the lookup in the database table to destroy the elment selected
-    @portfolios_items = Portfolio.find(params[:id])
     # this will destroy the elemlent
     @portfolios_items.destroy
     # this will reditect the user to the page we want
@@ -82,10 +78,14 @@ class PortfoliosController < ApplicationController
 
     private
 
+  def set_portfolios_items
+    @portfolios_items = Portfolio.find(params[:id])
+  end
+
   def portfolio_params
     params.require(:portfolio).permit(:title,
                                       :subtitle,
                                       :body,
                                       technologies_attributes: [:name])
-    end
+  end
   end
