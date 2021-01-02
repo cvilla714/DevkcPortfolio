@@ -34,17 +34,20 @@
        </div>
   </div>
 
-
-   <div class="col md-9"></div>
-
-   <div class="col md-3 text-right">
-   <div class="show ">
-      <%= render "devise/shared/links" %>
+  <div class="row">
+    <div class="col">
     </div>
-   </div>
-    <div class="actions text-right">
-      <%= f.submit "Sign up",class:"btn btn-info" %>
-    </div>  
+    <div class="col">
+      <div class="row">
+        <div class="col d-flex align-items-center justify-content-center ">
+          <%= render "devise/shared/links" %>
+        </div>
+        <div class="col actions text-center">
+            <%= f.submit "Sign up",class:"btn btn-info" %>
+          </div>  
+      </div>
+    </div>
+  </div>
 <% end %>
   </div>
 </div>
