@@ -1,14 +1,13 @@
-<p id="notice"><%= notice %></p>
+<div class="col-md-8 blog-main">
+  <h3 class="pb-4 mb-4 font-italic border-bottom">
+    <strong>Title:</strong>
+    <%= @blog.title %>
+  </h3>
+  <%= link_to 'Edit', edit_blog_path(@blog) if logged_in?(:site_admin) %> |
+  <%= link_to 'Back', blogs_path %>
+     <p><strong>Body:</strong>
+      <%= @blog.body %>
+      </p>
+  </div><!-- /.blog-main -->
+<br>
 
-<p>
-  <strong>Title:</strong>
-  <%= @blog.title %>
-</p>
-
-<p>
-  <strong>Body:</strong>
-  <%= @blog.body %>
-</p>
-
-<%= link_to 'Edit', edit_blog_path(@blog) if logged_in?(:site_admin) %> |
-<%= link_to 'Back', blogs_path %>
