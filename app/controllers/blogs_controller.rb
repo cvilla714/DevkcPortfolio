@@ -33,6 +33,7 @@ class BlogsController < ApplicationController
 
     respond_to do |format|
       if @blog.save
+        # add_topic
         format.html { redirect_to @blog, notice: 'Blog was successfully created.' }
         format.json { render :show, status: :created, location: @blog }
       else
@@ -47,6 +48,7 @@ class BlogsController < ApplicationController
   def update
     respond_to do |format|
       if @blog.update(blog_params)
+        # add_topic
         format.html { redirect_to @blog, notice: 'Blog was successfully updated.' }
         format.json { render :show, status: :ok, location: @blog }
       else
@@ -84,6 +86,14 @@ class BlogsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def blog_params
-    params.require(:blog).permit(:title, :body)
+    params.require(:blog).permit(:title, :body, :topic_id)
   end
+
+  # def display_topics
+  # @topics = Topics.all.order(:id)
+  # end
+
+  # def add_topic
+  # blog_params['topic_id']
+  # end
 end
