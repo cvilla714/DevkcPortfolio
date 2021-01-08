@@ -21,6 +21,11 @@
     <%= form.text_area :body,class:"form-control" ,rows:15 %>
   </div>
 
+<div class="field form-group">
+<%= form.label :topic %>
+<%= form.collection_select :topic_id, Topic.order(:title), :id, :title,class:"form-control"  %>
+</div>
+
   <div class="actions">
     <%= form.submit %>
   </div>
