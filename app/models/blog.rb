@@ -6,5 +6,6 @@ class Blog < ApplicationRecord
   validates :title, length: { in: 4..25 }
   validates :title, uniqueness: true
   belongs_to :topic
+  belongs_to :author, class_name: 'User'
   validates :title, :body, presence: true
 end
