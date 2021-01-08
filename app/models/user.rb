@@ -16,6 +16,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   validates :name, presence: true
+  has_many :blogs, foreign_key: :author_id, source: :blogs
+  # has_many :articles, foreign_key: :author_id, source: :articles
 
   def first_name
     name.split.first
