@@ -1,0 +1,30 @@
+<div class="main container">
+<h3 class="text-center">
+  <strong>Title:</strong>
+  <%= @topic.title` %>
+</h3>
+<hr/>
+<hr/>    
+
+<div class="d-flex flex-wrap justify-content-start">
+<% @blogs.each do |blog|%>
+<div class="card col-12 col-md-6 artimg">
+  <div class="row no-gutters">
+    <div class="col-md-6">
+    </div>
+    <div class="col-md-6">
+      <div class="card-body">
+        <h5 class="card-title"><%= blog.title %></h5>
+        <p class="card-text m-3 border"><%= truncate(blog.body, length: 100) %></p>
+        <p class="card-text"><small class="text-muted"><%= link_to 'Read More',blog_path(blog.id) %> </small></p>
+        <%# edit_content(art) %>
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>
+</div>
+<br/>
+<%= link_to 'Edit', edit_blog_topic_path(@topic),class:"btn btn-info" %>
+<%= link_to 'Back', blogs_path,class:"btn btn-info" %>
+</div>
