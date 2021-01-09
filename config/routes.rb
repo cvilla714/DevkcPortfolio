@@ -16,11 +16,12 @@ Rails.application.routes.draw do
   # get 'contact-', to: 'pages#contact'
   get 'contact-me-to-work', to: 'pages#contact'
   resources :blogs do
-    resources :topics
+    # resources :topics
     member do
       get :toggle_status
     end
   end
+  resources :topics
 
   root to: 'pages#home' # this will replace this code  # get 'pages/home'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
