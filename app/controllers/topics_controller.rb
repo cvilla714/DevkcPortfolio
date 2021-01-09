@@ -8,11 +8,11 @@ class TopicsController < ApplicationController
   end
 
   def show
-    @blogs = @topic.blogs
-    if @blgs.blank?
+    @blogs = Topic.find(params[:id]).blogs
+    if @blogs.blank?
       redirect_to root_path, notice: 'There are no blogs on this topic yet'
     else
-      @most_recent_blog = @blogs.most_recents
+      @most_recent_blog = @blogs.most_recent
     end
   end
 
