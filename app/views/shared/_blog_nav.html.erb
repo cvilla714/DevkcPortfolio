@@ -10,13 +10,14 @@
       Topics
     </a>
     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-      link_to 'HTML',
-      <a class="dropdown-item" href="#">Action</a>
-      <a class="dropdown-item" href="#">Another action</a>
+      <% topic_list.each do |topic|%>
+      <%= link_to topic.title,topic_path(topic.id),class:"nav-link active" %>
+      <% end %>
       <div class="dropdown-divider"></div>
       <a class="dropdown-item" href="#">Something else here</a>
     </div>
   </li>
     <%= login_helper "nav-link" %>
+    <h5 class="nav-link"> Hi, <%= current_user.first_name %> </h5>
   </nav>
 </div>
