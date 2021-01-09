@@ -29,7 +29,12 @@ class BlogsController < ApplicationController
   # POST /blogs
   # POST /blogs.json
   def create
-    @blog = Blog.new(blog_params)
+    # @blog = Blog.new(blog_params)
+    @blog = Blog.new
+    @blog.author_id = current_user.id
+    @blog.title = blog_params[:title]
+    @blog.body = blog_params[:body]
+    @blog.topic_id = blog_params[:topic_id]
 
     respond_to do |format|
       if @blog.save
@@ -46,8 +51,15 @@ class BlogsController < ApplicationController
   # PATCH/PUT /blogs/1
   # PATCH/PUT /blogs/1.json
   def update
+    @blog = Blog.new
+    @blog.author_id = current_user.id
+    @blog.title = blog_params[:title]
+    @blog.body = blog_params[:body]
+    @blog.topic_id = blog_params[:topic_id]
+
     respond_to do |format|
-      if @blog.update(blog_params)
+      if @blog.save
+        # if @blog.update(blog_params)
         # add_topic
         format.html { redirect_to @blog, notice: 'Blog was successfully updated.' }
         format.json { render :show, status: :ok, location: @blog }
@@ -86,7 +98,7 @@ class BlogsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def blog_params
-    params.require(:blog).permit(:title, :body, :topic_id)
+    params.require(:blog).permit(:title, :body, :topic_id, :author_id)
   end
 
   # def display_topics
