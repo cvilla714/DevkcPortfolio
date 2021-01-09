@@ -38,6 +38,7 @@ class BlogsController < ApplicationController
 
     respond_to do |format|
       if @blog.save
+        #  @blog.topic.delete.all
         # add_topic
         format.html { redirect_to @blog, notice: 'Blog was successfully created.' }
         format.json { render :show, status: :created, location: @blog }
@@ -59,14 +60,15 @@ class BlogsController < ApplicationController
 
     respond_to do |format|
       if @blog.save
+        # if @blog.update
+        #  @blog.topic.delete.all
         # if @blog.update(blog_params)
-        # add_topic
         format.html { redirect_to @blog, notice: 'Blog was successfully updated.' }
         format.json { render :show, status: :ok, location: @blog }
       else
         format.html { render :edit }
         format.json { render json: @blog.errors, status: :unprocessable_entity }
-      end
+    end
     end
   end
 
