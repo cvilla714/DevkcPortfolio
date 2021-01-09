@@ -8,7 +8,7 @@
 <ul>
 <%# @most_recent_blog.inspect %>
 <%= link_to @most_recent_blog[-1].title,blog_path(@most_recent_blog[-1].id) %>
-<% @blogs.each do |blog| %>
+<% @blogs.order(created_at: :asc).each do |blog| %>
 <li> <%= link_to blog.title,blog_path(blog.id) %></li>
 <% end %>
 </ul>
