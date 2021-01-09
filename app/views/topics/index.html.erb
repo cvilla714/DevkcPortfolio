@@ -1,30 +1,33 @@
-<div class="main container">
-<h3 class="text-center">
-  <strong>Title:</strong>
-  <%= @topic.title` %>
-</h3>
-<hr/>
-<hr/>    
 
-<div class="d-flex flex-wrap justify-content-start">
-<% @blogs.each do |blog|%>
-<div class="card col-12 col-md-6 artimg">
-  <div class="row no-gutters">
-    <div class="col-md-6">
-    </div>
-    <div class="col-md-6">
-      <div class="card-body">
-        <h5 class="card-title"><%= blog.title %></h5>
-        <p class="card-text m-3 border"><%= truncate(blog.body, length: 100) %></p>
-        <p class="card-text"><small class="text-muted"><%= link_to 'Read More',blog_path(blog.id) %> </small></p>
-        <%# edit_content(art) %>
-      </div>
-    </div>
-  </div>
-</div>
-<% end %>
-</div>
-<br/>
-<%= link_to 'Edit', edit_blog_topic_path(@topic),class:"btn btn-info" %>
-<%= link_to 'Back', blogs_path,class:"btn btn-info" %>
+<div class="container bg-white">
+<p id="notice"><%= notice %></p>
+
+
+<h1 class="text-center text-primary">Topics</h1>
+
+<table  class="table main">
+  <thead class="thead-dark text-center">
+    <tr>
+      <th>Title</th>
+      <th>ID</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody class="text-center">
+    <% @topics.each do |topic| %>
+      <tr>
+        <td><%= topic.title %></td>
+        <td><%= topic.id %></td>
+        <td><%= link_to 'Show', topic %></td>
+        <td><%= link_to 'Edit', edit_topic_path(topic) %></td>
+        <td><%= link_to 'Destroy', topic, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Topic', new_topic_path,class:"btn btn-info btn-block" %>
 </div>
