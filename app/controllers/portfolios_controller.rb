@@ -1,5 +1,4 @@
-# frozen_string_literal: true
-
+# rubocop:disable Layout/LineLength
 class PortfoliosController < ApplicationController
   before_action :set_portfolios_items, only: %i[edit show update destroy]
   # layout 'portfolio'
@@ -76,7 +75,7 @@ class PortfoliosController < ApplicationController
     end
   end
 
-    private
+  private
 
   def set_portfolios_items
     @portfolios_items = Portfolio.find(params[:id])
@@ -88,4 +87,5 @@ class PortfoliosController < ApplicationController
                                       :body,
                                       technologies_attributes: [:name])
   end
-  end
+end
+# rubocop:enable Layout/LineLength

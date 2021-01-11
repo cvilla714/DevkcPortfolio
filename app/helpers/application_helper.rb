@@ -1,5 +1,4 @@
-# frozen_string_literal: false
-
+# rubocop:disable Lint/UnderscorePrefixedVariableName
 # Module for the ApplicatioHelper
 module ApplicationHelper
   def login_helper(style = ' ')
@@ -13,10 +12,12 @@ module ApplicationHelper
   end
 
   def source_helper(_layout_name)
-    if session[:source]
-      # content_tag(:p, "Thanks for visiting me from #{session[:source]}", class: 'source-greetings')
-      greetings = "Thanks for visiting me from #{session[:source]} and you are on the #{_layout_name} layout"
-      content_tag(:p, greetings, class: 'source-greetings')
-    end
+    return unless session[:source]
+
+    # content_tag(:p, "Thanks for visiting me from #{session[:source]}", class: 'source-greetings')
+    greetings = "Thanks for visiting me from #{session[:source]} and you are on the #{_layout_name} layout"
+    content_tag(:p, greetings, class: 'source-greetings')
+    # end
   end
 end
+# rubocop:enable Lint/UnderscorePrefixedVariableName

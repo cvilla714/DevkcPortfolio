@@ -1,5 +1,9 @@
-<h1>Portolio Items</h1>
+<div class="album py-5 bg-light">
+  <div class="container">
 
-<%= link_to "create a new portfolio ", new_portfolio_path if logged_in?(:site_admin) %>
+    <div class="row">
 
-<%= render partial: 'portfolio_item',collection: @portfolios_items  %>
+        <%= render partial: 'portfolio_item',collection: @portfolios_items  %>
+        </div>
+    </div>
+</div>

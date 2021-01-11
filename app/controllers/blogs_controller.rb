@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # class for the BlogsController
 class BlogsController < ApplicationController
   before_action :set_blog, only: %i[show edit update destroy toggle_status]
@@ -68,7 +66,7 @@ class BlogsController < ApplicationController
       else
         format.html { render :edit }
         format.json { render json: @blog.errors, status: :unprocessable_entity }
-    end
+      end
     end
   end
 
