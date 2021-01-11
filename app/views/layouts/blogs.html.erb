@@ -6,8 +6,8 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'blogs', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_pack_tag 'blogs', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     
     
@@ -66,13 +66,14 @@
 
       <%= yield %>
 
-      <%= render 'shared/blog_sidebar' %>
+      <% render 'shared/blog_sidebar' %>
   
    </div>
  </main>
   <%# start of footer  %>
-    <footer class="blog-footer">
-      <p>Blog template built for <a href="https://getbootstrap.com/">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+  
+    <footer class="blog-footer text-center">
+      <h5>Copyright <i class="far fa-copyright fa-sm"></i> Cosmel Villalobos 2021</h5>
       <p>
         <a href="#">Back to top</a>
       </p>
