@@ -4,14 +4,25 @@
     <strong>Topic Title:</strong>
     <%= @topic.title%>
 </p>
-
-<ul>
 <%# @most_recent_blog.inspect %>
 <%= link_to @most_recent_blog[-1].title,blog_path(@most_recent_blog[-1].id) %>
-<% @blogs.order(created_at: :asc).each do |blog| %>
-<li> <%= link_to blog.title,blog_path(blog.id) %></li>
-<% end %>
-</ul>
+<%# @blogs.order(created_at: :asc).each do |blog| %>
+<%# <li> link_to blog.title,blog_path(blog.id)</li> %>
+<%# end %>
+
 
 <%= link_to 'Edit', edit_topic_path(@topic) %> 
 <%= link_to 'Back', topics_path %>
+
+<div class="d-flex flex-row flex-wrap">
+<% @blogs.order(created_at: :asc).each do |blog| %>
+<div class="card text-white bg-success mb-3 w-50">
+  <div class="card-header"><%= blog.title %></div>
+  <div class="card-body">
+    <p class="card-text"><%= truncate(blog.body,legnth: 100)%></p>
+    <%= link_to 'Continue Reading',blog_path(blog.id) %>
+    <p class="blog-post-meta">Published <%= distance_of_time_in_words(blog.created_at, Time.now) %> ago by <%= blog.author.name %></p>
+  </div>
+</div>
+<% end %>
+</div>
