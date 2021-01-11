@@ -6,27 +6,21 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'album', media: 'all', 'data-turbolinks-track': 'reload' %>
+          <!-- Bootstrap core CSS -->
+    <link href="design/bootstrap.min.css" rel="stylesheet" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <%# stylesheet_link_tag 'album', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_pack_tag 'album', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  
   </head>
 
   <body>
         <%= render 'shared/portfolio_nav' %>
+        <%= render 'shared/portfolio_jumbo' %>
 
     <%= yield %>
 
-    <%# start of footer %>
-    <footer class="text-muted">
-      <div class="container">
-        <p class="float-right">
-          <a href="#">Back to top</a>
-        </p>
-        <p>Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
-        <p>New to Bootstrap? <a href="{{ site.url }}/">Visit the homepage</a> or read our <a href="{{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/introduction/">getting started guide</a>.</p>
-      </div>
-    </footer>
-    <%# end of footer %>
+    <%= render 'shared/portfolio_footer' %>
     <%= source_helper("application")%>
     </div>
   </body>
