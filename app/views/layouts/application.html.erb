@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title><%= @page_title %></title>
     
     <%= csrf_meta_tags %>
@@ -14,9 +16,10 @@
 
   </head>
 
-  <body class="n-height">
-    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column text-center">
-        <%= render 'shared/application_nav' %>
+  <body class="text-center">
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+  
+          <%= render 'shared/application_nav' %>
           <%= yield %>
           <%= source_helper("application") %>
           <%= render 'shared/application_footer' %>

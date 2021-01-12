@@ -1,5 +1,9 @@
+/* stylelint-disable selector-list-comma-newline-after */
 
-// /* stylelint-disable selector-list-comma-newline-after */
+html {
+  position:relative;
+  min-height:100%;
+}
 
 .blog-header {
   line-height: 1;
@@ -101,6 +105,12 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
   background-color: #f9f9f9;
   border-top: .05rem solid #e5e5e5;
+  position:absolute;
+  left:0;
+  bottom:0;
+  height:100px;
+  overflow:hidden;
+  width: inherit;
 }
 .blog-footer p:last-child {
   margin-bottom: 0;

@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
+   <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title><%= @page_title %></title>
     
     <%= csrf_meta_tags %>
@@ -14,15 +16,16 @@
   
   </head>
 
-  <body class="h-auto bg-success">
+  <body>
+
         <%= render 'shared/portfolio_nav' %>
-        <%= render 'shared/portfolio_jumbo' %>
+        <%# render 'shared/portfolio_jumbo'  %>
 
     <%= yield %>
 
-    <%= render 'shared/portfolio_footer' %>
+    
     <%= source_helper("application")%>
-    </div>
+    <%# render 'shared/portfolio_footer' %>
   </body>
 </html>
 
