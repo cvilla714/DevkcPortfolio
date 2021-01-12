@@ -7,14 +7,14 @@
     <%= csp_meta_tag %>
 
           <!-- Bootstrap core CSS -->
-    <link href="design/bootstrap.min.css" rel="stylesheet" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <%# <link href="design/bootstrap.min.css" rel="stylesheet" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous"> %>
     <%# stylesheet_link_tag 'album', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_pack_tag 'album', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   
   </head>
 
-  <body>
+  <body class="h-auto bg-warning">
         <%= render 'shared/portfolio_nav' %>
         <%= render 'shared/portfolio_jumbo' %>
 

@@ -1,5 +1,5 @@
-    <div class="jumbotron p-4 p-md-5 text-white rounded bg-dark">
-      <div class="col-md-6 px-0">
+    <div class="jumbotron w-100 p-4 p-md-5 mb-4 text-white rounded bg-dark">
+      <div class="col px-0">
         <strong class="d-inline-block mb-2 text-warning"><%= Topic.find(3).title %></strong>
         <h1 class="display-4 font-italic"><%= Topic.find(3).blogs.order(created_at: :asc)[-1].title %></h1>
         <p class="lead my-3"><%= truncate(Topic.find(3).blogs.order(created_at: :asc)[-1].body, length: 200) %> </p>
