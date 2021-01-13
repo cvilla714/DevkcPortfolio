@@ -16,16 +16,17 @@
   
   </head>
 
-  <body>
-
+  <body class="h-auto">
+   <div class="container">
         <%= render 'shared/portfolio_nav' %>
-        <%# render 'shared/portfolio_jumbo'  %>
+        <%= render 'shared/portfolio_jumbo'  %>
 
     <%= yield %>
 
     
     <%= source_helper("application")%>
-    <%# render 'shared/portfolio_footer' %>
+    <%= render 'shared/portfolio_footer' %>
+    </div>
   </body>
 </html>
 
