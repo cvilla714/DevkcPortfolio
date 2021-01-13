@@ -5,15 +5,15 @@
         </div>
             <div class="col-md-5">
             <h3><%= @portfolios_items.title %></h3>
-            <hr>
+            <hr class="bg-white">
                <em><%= @portfolios_items.subtitle %></em>
             <p><%= @portfolios_items.body %></p>
-            <hr>
+            <hr class="bg-white">
              <h2>Technologies Used</h2>
             <% @portfolios_items.technologies.each do |tech|%>
                 <p><%= tech.name %> </p>
              <% end %>
-             <hr>
+             <hr class="bg-white">
         </div>
     </div>
 </div>
