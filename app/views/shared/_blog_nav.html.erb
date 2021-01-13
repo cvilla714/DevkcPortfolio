@@ -1,14 +1,15 @@
 <div class="nav-scroller py-1 mb-2">
   <nav class="nav d-flex justify-content-between">
-    <%= link_to 'Home',root_path,class:"nav-link" %>
-    <%= link_to 'Blogs',blogs_path,class:"nav-link" %>
-    <%= link_to 'Portfolios',portfolios_path,class:"nav-link" %>
+    <%# link_to 'Home',root_path,class:"nav-link" %>
+    <%# link_to 'Blogs',blogs_path,class:"nav-link" %>
+    <%# link_to 'Portfolios',portfolios_path,class:"nav-link" %>
+    <%= nav_helper 'nav-link','span' %>
     <%# link_to 'About Me',about_me_path,class:"nav-link" %>
     <%# link_to 'Contact Me',contact_me_to_work_path,class:"nav-link"%>
-        <% topic_list.each do |topic|%>
-    <li class="nav-item-active">
-    <%= link_to topic.title,topic_path(topic.id),class:"nav-link active" %>
-    </li>
+    <% topic_list.each do |topic|%>
+      <li class="nav-item-active">
+      <%= link_to topic.title,topic_path(topic.id),class:"nav-link active" %>
+      </li>
     <% end %>
 
     <%= login_helper "nav-link" %>

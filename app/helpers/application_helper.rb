@@ -20,16 +20,43 @@ module ApplicationHelper
     # end
   end
 
-  def nav_helper style, tag_type
-nav_links = <<NAV
-<#{tag_type}><a href="#{root_path}",class="#{style}">Home</a></#{tag_type}>
-<#{tag_type}><a href="#{about_me_path}",class="#{style}">About</a></#{tag_type}>
-<#{tag_type}><a href="#{contact_me_to_work_path}",class="#{style}">Contact</a></#{tag_type}>
-<#{tag_type}><a href="#{blogs_path}",class="#{style}">Blog</a></#{tag_type}>
-<#{tag_type}><a href="#{portfolios_path}",class="#{style}">Portfolio</a></#{tag_type}>
-NAV
-      nav_links.html_safe
+  def nav_items
+    [
+      {
+        url: root_path,
+        title:'Home'
+      },
+      {
+        url: about_me_path,
+        title:'About'
+      },
+      {
+        url: contact_me_to_work_path,
+        title:'Contact'
+      },
+      {
+        url: blogs_path,
+        title: 'Blog'
+
+      },
+      {
+        url: portfolios_path,
+        title: 'Portfolio'
+      },
+    ]
   end
+
+  def nav_helper style, tag_type
+    nav_links = ''
+    nav_items.each do |item|
+      nav_links << "<#{tag_type}><a href='#{item[:url]}' class='#{style} #{active? item[:url]}'>#{item[:title]}</a></#{tag_type}>"
+    end
+     nav_links.html_safe
+  end
+
+  def active? path
+  "active" if current_page? path
+  end  
 
 end
 # rubocop:enable Lint/UnderscorePrefixedVariableName

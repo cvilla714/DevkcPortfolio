@@ -12,11 +12,7 @@
         <div class="col-sm-4 offset-md-1 py-4">
           <h4 class="text-white">Explore</h4>
           <ul class="list-unstyled">
-            <li><%= link_to 'Home',root_path,class:"text-white" %></li>
-            <li><%= link_to 'Blogs',blogs_path,class:"text-white" %></li>
-            <li><%= link_to 'Portfolios',portfolios_path,class:"text-white" %></li>
-            <li><%= link_to 'About Me',about_me_path,class:"text-white" %></li>
-            <li><%= link_to 'Contact Me',contact_me_to_work_path,class:"text-white" %></li>
+          <%= nav_helper 'text-white','li' %>
             <li><%= login_helper class:"text-white"%></li>
           </ul>
         </div>
@@ -34,8 +30,6 @@
       </button>
     </div>
   </div>
-
-
-<%# render 'shared/portfolio_footer' %>
 </header>
+
 <%# end of the navigation bar%>
