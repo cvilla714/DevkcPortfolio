@@ -16,10 +16,10 @@
   
   </head>
 
-  <body class="h-auto">
+  <body class="h-auto bg-success">
    <div class="container">
         <%= render 'shared/portfolio_nav' %>
-        <%= render 'shared/portfolio_jumbo'  %>
+        <%= render 'shared/portfolio_jumbo' unless logged_in?(:site_admin) %>
 
     <%= yield %>
 
