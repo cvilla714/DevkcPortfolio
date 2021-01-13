@@ -49,3 +49,4 @@ gem 'friendly_id', '~> 5.4.0'
 gem 'hirb', '~> 0.7.3'
 gem 'petergate', '~> 2.0', '>= 2.0.1'
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
+gem 'jquery-ui-rails', '~> 6.0', '>= 6.0.1'

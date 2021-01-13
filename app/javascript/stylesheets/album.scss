@@ -1,3 +1,5 @@
+// @import "webpack-jquery-ui";
+
 .jumbotron {
   padding-top: 3rem;
   padding-bottom: 3rem;
@@ -29,17 +31,17 @@ footer {
 }
 
 footer p {
-  margin-bottom: .25rem;
+  margin-bottom: 0.25rem;
 }
 
-.portfolio-form{
+.portfolio-form {
   padding: 2.82rem;
 }
 
-.portfolio-edit{
+.portfolio-edit {
   padding: 5.95rem 0 5.95rem;
 }
 
 // .separator{
-  // background-color:yellow;
+// background-color:yellow;
 // }
