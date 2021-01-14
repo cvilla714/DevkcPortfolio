@@ -10,9 +10,11 @@ class Portfolio < ApplicationRecord
   # where(subtitle: 'Angular')
   #   end
 
+  mount_uploader :main_image, PortfolioUploader
+  mount_uploader :thumb_image, PortfolioUploader
 
   def self.by_position
-    order("position ASC")
+    order('position ASC')
   end
 
   scope :angular, -> { where(subtitle: 'Angular') }

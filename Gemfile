@@ -49,3 +49,7 @@ gem 'friendly_id', '~> 5.4.0'
 gem 'hirb', '~> 0.7.3'
 gem 'petergate', '~> 2.0', '>= 2.0.1'
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
+gem 'carrierwave', '~> 2.1'
+gem 'mini_magick', '~> 4.11'
+gem 'carrierwave-aws', '~> 1.5'
+gem 'dotenv-rails', '~> 2.7', '>= 2.7.6'
