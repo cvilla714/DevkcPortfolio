@@ -10,16 +10,26 @@
 
               <!-- Bootstrap core CSS -->
     <%# <link href="design/bootstrap.min.css" rel="stylesheet" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous"> %>
-    <%# stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     
 
   </head>
 
-  <body class="text-center">
+  <body class="text-center" id="back">
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
   
+          <%= video_tag(
+            'HardDrivePhotojpeg.mp4',
+            id: 'background',
+            autoplay:true,
+            loop:true,
+            muted:true,
+            poster: 'homebg.png'
+          )
+          %>
+          
           
           <%= render 'shared/application_nav' %>
           <%= yield %>
