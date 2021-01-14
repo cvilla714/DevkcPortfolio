@@ -1,5 +1,12 @@
 # frozen_string_literal: true
 
+User.create(email:"luffy@onepiece.com",name:"luffy",password:"123456")
+User.create(email:"zorro@onepiece.com",name:"zorro",password:"123456")
+User.create(email:"sanji@onepiece.com",name:"sanji",password:"123456")
+User.create(email:"jinbei@onepiece.com",name:"jinbei",password:"123456")
+User.create(email:"robin@onepiece.com",name:"robin",password:"123456")
+
+
 3.times do |topic|
   Topic.create!(
     title: "Topic#{topic}"
@@ -23,7 +30,9 @@ puts '3 Topics created'
     consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate
      velit esse quam nihil molestiae consequatur, vel illum qui dolorem
      eum fugiat quo voluptas nulla pariatur?",
-    topic_id: Topic.last.id
+    topic_id: Topic.last.id,
+    author_id:1
+    
   )
 end
 
@@ -49,8 +58,8 @@ puts '5 skills created'
              in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
              officia deserunt mollit anim id est laborum.",
-    main_image: 'https://via.placeholder.com/400.png/09f/fff%20C/O%20https://placeholder.com/',
-    thumb_image: 'https://via.placeholder.com/200.png/09f/fff%20C/O%20https://placeholder.com/'
+    main_image: 'https://via.placeholder.com/600x400',
+    thumb_image: 'https://via.placeholder.com/350x200'
   )
 end
 
@@ -67,8 +76,10 @@ puts '5 Portoflios created with the Subject My Great Service'
              in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
              officia deserunt mollit anim id est laborum.",
-    main_image: 'https://via.placeholder.com/400.png/09f/fff%20C/O%20https://placeholder.com/',
-    thumb_image: 'https://via.placeholder.com/200.png/09f/fff%20C/O%20https://placeholder.com/'
+      main_image: 'https://via.placeholder.com/600x400',
+      thumb_image: 'https://via.placeholder.com/350x200'
+             
+    
   )
 end
 
@@ -85,8 +96,9 @@ puts '3 Portoflios with Ruby on Rails Subject created'
              in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
              officia deserunt mollit anim id est laborum.",
-    main_image: 'https://via.placeholder.com/400.png/09f/fff%20C/O%20https://placeholder.com/',
-    thumb_image: 'https://via.placeholder.com/200.png/09f/fff%20C/O%20https://placeholder.com/'
+             main_image: 'https://via.placeholder.com/600x400',
+             thumb_image: 'https://via.placeholder.com/350x200'
+             
   )
 end
 

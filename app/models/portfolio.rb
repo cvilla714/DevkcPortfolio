@@ -10,8 +10,8 @@ class Portfolio < ApplicationRecord
   # where(subtitle: 'Angular')
   #   end
 
-  mount_uploader :main_image, PortfolioUploader
-  mount_uploader :thumb_image, PortfolioUploader
+  # mount_uploader :main_image, PortfolioUploader
+  # mount_uploader :thumb_image, PortfolioUploader
 
   def self.by_position
     order('position ASC')
@@ -26,7 +26,7 @@ class Portfolio < ApplicationRecord
   after_initialize :set_defaults
 
   def set_defaults
-    self.main_image ||= 'https://via.placeholder.com/400.png/09f/fff%20C/O%20https://placeholder.com/'
-    self.thumb_image ||= 'https://via.placeholder.com/200.png/09f/fff%20C/O%20https://placeholder.com/'
+    self.main_image ||= 'https://via.placeholder.com/600x400'
+    self.thumb_image ||= 'https://via.placeholder.com/350x200'
   end
 end
