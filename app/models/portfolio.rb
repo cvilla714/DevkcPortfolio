@@ -1,7 +1,7 @@
 class Portfolio < ApplicationRecord
-  include Placeholder
+  # include Placeholder
   has_many :technologies
-  validates :title, :body, :main_image, :thumb_image, presence: true
+  validates :title, :body, presence: true
   validates :title, length: { in: 5..25 }
 
   accepts_nested_attributes_for :technologies,
@@ -11,8 +11,8 @@ class Portfolio < ApplicationRecord
   # where(subtitle: 'Angular')
   #   end
 
-  # mount_uploader :main_image, PortfolioUploader
   # mount_uploader :thumb_image, PortfolioUploader
+  # mount_uploader :main_image, PortfolioUploader
 
   def self.by_position
     order('position ASC')
@@ -24,10 +24,10 @@ class Portfolio < ApplicationRecord
 
   scope :service, -> { where(subtitle: 'My Great Service') }
 
-  after_initialize :set_defaults
-
-  def set_defaults
-    self.main_image ||= Placeholder.image_genertor(height: '600', width: '400')
-    self.thumb_image ||= Placeholder.image_genertor(height: '350', width: '200')
-  end
+  # after_initialize :set_defaults
+  #
+  # def set_defaults
+  # self.main_image ||= Placeholder.image_genertor(height: '600', width: '400')
+  # self.thumb_image ||= Placeholder.image_genertor(height: '350', width: '200')
+  # end
 end

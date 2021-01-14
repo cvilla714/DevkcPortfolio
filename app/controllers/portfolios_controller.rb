@@ -79,10 +79,6 @@ class PortfoliosController < ApplicationController
 
   private
 
-  def set_portfolios_items
-    @portfolios_items = Portfolio.find(params[:id])
-  end
-
   def portfolio_params
     params.require(:portfolio).permit(:title,
                                       :subtitle,
@@ -90,6 +86,10 @@ class PortfoliosController < ApplicationController
                                       :main_image,
                                       :thumb_image,
                                       technologies_attributes: [:name])
+  end
+
+  def set_portfolios_items
+    @portfolios_items = Portfolio.find(params[:id])
   end
 end
 # rubocop:enable Layout/LineLength

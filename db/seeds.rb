@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-User.create(email:"luffy@onepiece.com",name:"luffy",password:"123456")
+User.create(email:"luffy@onepiece.com",name:"luffy",password:"123456",role:"site_admin")
 User.create(email:"zorro@onepiece.com",name:"zorro",password:"123456")
 User.create(email:"sanji@onepiece.com",name:"sanji",password:"123456")
 User.create(email:"jinbei@onepiece.com",name:"jinbei",password:"123456")
