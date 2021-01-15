@@ -1,6 +1,6 @@
 class Portfolio < ApplicationRecord
   include Placeholder
-  has_many :technologies
+  has_many :technologies, dependent: :destroy
   validates :title, :body, :main_image, :thumb_image, presence: true
   validates :title, length: { in: 5..25 }
 
@@ -11,8 +11,8 @@ class Portfolio < ApplicationRecord
   # where(subtitle: 'Angular')
   #   end
 
-  # mount_uploader :main_image, PortfolioUploader
   # mount_uploader :thumb_image, PortfolioUploader
+  # mount_uploader :main_image, PortfolioUploader
 
   def self.by_position
     order('position ASC')
