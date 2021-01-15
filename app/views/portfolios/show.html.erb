@@ -1,7 +1,9 @@
 <div class="container portfolio-container">
     <div class="row">
         <div class="col-md-7">
-        <%= image_tag @portfolios_items.main_image %>
+        <%= image_tag @portfolios_items.portfolio_image %>
+        <%# image_tag @portfolios_items.main_image %>
+        <%# image_tag @portfolios_items.main_image.variant(resize_to_limit: [350, 200]) %>
         </div>
             <div class="col-md-5">
             <h3><%= @portfolios_items.title %></h3>

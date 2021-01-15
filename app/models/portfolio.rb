@@ -1,5 +1,6 @@
 class Portfolio < ApplicationRecord
   include Placeholder
+  has_one_attached :portfolio_image
   has_many :technologies, dependent: :destroy
   validates :title, :body, :main_image, :thumb_image, presence: true
   validates :title, length: { in: 5..25 }

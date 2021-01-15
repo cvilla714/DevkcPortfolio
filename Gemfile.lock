@@ -250,6 +250,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  aws-sdk-s3
   bootsnap (>= 1.4.2)
   byebug
   carrierwave (~> 2.1)
@@ -258,6 +259,7 @@ DEPENDENCIES
   dotenv-rails (~> 2.7, >= 2.7.6)
   friendly_id (~> 5.4.0)
   hirb (~> 0.7.3)
+  image_processing (~> 1.2)
   jbuilder (~> 2.7)
   listen (~> 3.2)
   mini_magick (~> 4.11)
