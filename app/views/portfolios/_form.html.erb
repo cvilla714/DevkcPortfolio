@@ -1,3 +1,4 @@
+<%= notice %>
 <%= form_for(@portfolios_items) do |form| %>
   <div class="row">
    <div class="col-md-6">
@@ -11,17 +12,12 @@
       <%= form.text_area :subtitle,class:"form-control" %>
       </div>
 
-      <div class="field form-group">
-      <label class="btn btn-primary">
-       <%= form.label :portfolio_image %>
-       <%= form.file_field :portfolio_image%>
-      </div>
 
-      <%# <div class="field form-group"> %>
-      <%# <label class="btn btn-primary"> %>
-      <%# form.label :thumb_image %>
-      <%# form.file_field :thumb_image%>
-      <%# </div> %>
+      <div class="field form-group">
+      
+       <%= form.label :main_image %>
+       <%= form.file_field :portfolio_image,class:"btn btn-primary btn-block" %>
+      </div>
     </div>
 
     

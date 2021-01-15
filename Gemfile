@@ -44,6 +44,7 @@ group :development do
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+gem 'aws-sdk-s3', require: false
 gem 'carrierwave', '~> 2.1'
 gem 'carrierwave-aws', '~> 1.5'
 gem 'devise', '~> 4.7', '>= 4.7.3'
@@ -54,4 +55,3 @@ gem 'image_processing', '~> 1.2'
 gem 'mini_magick', '~> 4.11'
 gem 'petergate', '~> 2.0', '>= 2.0.1'
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
-gem "aws-sdk-s3", require: false

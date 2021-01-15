@@ -1,8 +1,8 @@
 class Portfolio < ApplicationRecord
-  include Placeholder
+  # include Placeholder
   has_one_attached :portfolio_image
   has_many :technologies, dependent: :destroy
-  validates :title, :body, :main_image, :thumb_image, presence: true
+  validates :title, :body, presence: true
   validates :title, length: { in: 5..25 }
 
   accepts_nested_attributes_for :technologies,
@@ -19,16 +19,20 @@ class Portfolio < ApplicationRecord
     order('position ASC')
   end
 
+  def thumbnail
+    portfolio_image.variant(resize: '600x500!').processed
+  end
+
   scope :angular, -> { where(subtitle: 'Angular') }
 
   scope :ruby_on_rails_portfolio_items, -> { where(subtitle: 'Ruby on Rails') }
 
   scope :service, -> { where(subtitle: 'My Great Service') }
 
-  after_initialize :set_defaults
+  # after_initialize :set_defaults
 
-  def set_defaults
-    self.main_image ||= Placeholder.image_genertor(height: '600', width: '400')
-    self.thumb_image ||= Placeholder.image_genertor(height: '350', width: '200')
-  end
+  # def set_defaults
+  # self.main_image ||= Placeholder.image_genertor(height: '600', width: '400')
+  # self.thumb_image ||= Placeholder.image_genertor(height: '350', width: '200')
+  # end
 end

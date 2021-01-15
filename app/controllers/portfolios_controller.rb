@@ -1,19 +1,9 @@
-# rubocop:disable Layout/LineLength
 class PortfoliosController < ApplicationController
   before_action :set_portfolios_items, only: %i[edit show update destroy]
-  # layout 'portfolio'
   access all: %i[show index], user: { except: %i[destroy new edit update edit create] }, site_admin: :all
   def index
-    # @portfolios_items = Portfolio.all
-    # @portfolios_items = Portfolio.order("position ASC")
     @portfolios_items = Portfolio.by_position
-    @page_title = 'DevkcPortolios'
-
-    # @portfolios_items = Portfolio.angular
-    # @portfolios_items = Portfolio.ruby_on_rails_portfolio_items
-    # @portfolios_items = Portfolio.where(subtitle: 'Angular')
-    # @portfolios_items = Portfolio.where(subtitle: 'Ruby on Rails')
-    # @portfolios_items = Portfolio.where(subtitle: "My Great Service")
+    @page_title = 'DevkcPorfolios'
   end
 
   def angular
@@ -34,7 +24,6 @@ class PortfoliosController < ApplicationController
   end
 
   def create
-    # @portfolios_items = Portfolio.new(params.require(:portfolio).permit(:title, :subtitle, :body, technologies_attributes: [:name]))
     @portfolios_items = Portfolio.new(portfolio_params)
 
     respond_to do |format|
@@ -67,10 +56,7 @@ class PortfoliosController < ApplicationController
   def show; end
 
   def destroy
-    # this will perform the lookup in the database table to destroy the elment selected
-    # this will destroy the elemlent
     @portfolios_items.destroy
-    # this will reditect the user to the page we want
     respond_to do |format|
       format.html { redirect_to portfolios_url, notice: 'Blog was successfully destroyed.' }
       format.json { head :no_content }
@@ -88,9 +74,6 @@ class PortfoliosController < ApplicationController
                                       :subtitle,
                                       :body,
                                       :portfolio_image,
-                                      :main_image,
-                                      :thumb_image,
                                       technologies_attributes: [:name])
   end
 end
-# rubocop:enable Layout/LineLength
