@@ -3,7 +3,8 @@ class PortfolioUploader < CarrierWave::Uploader::Base
   # include CarrierWave::RMagick
   # include CarrierWave::MiniMagick
 
-  # Choose what kind of storage to use for this uploader:
+  # Choose what kin d of storage to use for this uploader:
+  # storage :aws
   storage :file
   # storage :fog
 
