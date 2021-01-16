@@ -1,6 +1,7 @@
 class Portfolio < ApplicationRecord
   # include Placeholder
   has_one_attached :portfolio_image
+  # has_many_attached :portfolio_image
   has_many :technologies, dependent: :destroy
   validates :title, :body, presence: true
   validates :title, length: { in: 5..25 }
@@ -19,8 +20,8 @@ class Portfolio < ApplicationRecord
     order('position ASC')
   end
 
-  def thumbnail
-    portfolio_image.variant(resize: '600x500!').processed
+  def thumbnail(input)
+    portfolio_image[input].variant(resize: '300x300!').processed
   end
 
   scope :angular, -> { where(subtitle: 'Angular') }
