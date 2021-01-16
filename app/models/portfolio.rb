@@ -1,10 +1,11 @@
 class Portfolio < ApplicationRecord
   # include Placeholder
+  # has_rich_text :body
   has_one_attached :portfolio_image
   # has_many_attached :portfolio_image
   has_many :technologies, dependent: :destroy
   validates :title, :body, presence: true
-  validates :title, length: { in: 5..25 }
+  validates :title, length: { in: 5..100 }
 
   accepts_nested_attributes_for :technologies,
                                 reject_if: ->(attrs) { attrs['name'].blank? }

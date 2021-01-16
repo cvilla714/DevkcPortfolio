@@ -186,90 +186,179 @@ Blog.create(
 
 puts "Blog post created #{Blog.all.count}"
 
-5.times do |skills|
-  Skill.create!(
-    title: "Rails #{skills}",
-    percent_utilized: 15
-  )
-end
 
-puts "skills created #{Skill.all.count}"
-
-5.times do |portfolio_item|
-  Portfolio.create!(
-    title: "Portfolio title #{portfolio_item}",
-    subtitle: 'My Great Service',
-    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-        do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-             aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-             in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-             Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-             officia deserunt mollit anim id est laborum.",
-    main_image: 'https://via.placeholder.com/600x400',
-    thumb_image: 'https://via.placeholder.com/350x200'
-  )
-end
 Portfolio.create!(
-title: "Portfolio title #{portfolio_item}",
-subtitle: 'My Great Service',
-body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-    do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-         ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-         aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-         in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-         Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-         officia deserunt mollit anim id est laborum.",
-main_image: 'https://via.placeholder.com/600x400',
-thumb_image: 'https://via.placeholder.com/350x200',
-Technology.create(name:"Rails",name:)
+title: "Building a Clone for  the Newsweek Website",
+subtitle: 'Using Bootstrap Framework',
+body: "This project consists of replicating the website Newsweek.
+We used Bootstrap version 4.5 for the most part
+The content can be viewed on small screen sizes and all the way up to extra-large displays
+We also worked on the positioning of the elements",
+main_image: 'https://via.placeholder.com/600x400',  
+thumb_image: 'https://via.placeholder.com/350x200'
+)
 
+Portfolio.create!(
+title: "Linter for CSS",
+subtitle: 'Ruby Capstone',
+body: "The project is based on creating a linter for CSS
+It opens the file that is given in the terminal and the code will read line by line
+it will look for the errors, I concentrated on looking for
+the missing initial period at the beginning of the line to call the class
+it searches for missing semicolons at the end of every line
+it also searches for comments that were left on the code
+I also created the rspecs for the TDD approach I did a total of 5 test
+
+evaluating that the file exists
+evaluating that there are comments
+evaluating if the method created catches and missing an initial period
+evaluates that the methods is looking for missing semicolons
+evaluates the method that tests once the file doesn't return errors",
+
+main_image: 'https://via.placeholder.com/600x400',  
+thumb_image: 'https://via.placeholder.com/350x200'
+)
+
+Portfolio.create!(
+title: "Building with Responsive Design",
+subtitle: "Using Media Queries",
+body: "#HTML & CSS: Building with Responsive Design
+This project consists of replicating the website The Next Web website.
+Putting emphasis on how it behaves differently depending on the size of the screen where the website is rendered.
+We adjusted the breakpoints for desktops, laptops, iPads, and iPhones",
+
+main_image: 'https://via.placeholder.com/600x400',  
+thumb_image: 'https://via.placeholder.com/350x200'
+)
+
+Portfolio.create!(
+title: "Directory Of Events",
+subtitle: "HTML/CSS Capstone",
+body: "The design was inspired on the Mathew Njuguna patashuleKE design, I choose to go with a Directory of Events where I am giving back to the user a list of sports events that will take place either the current day, the day after, and over the weekend.
+It consists of a total of 3 pages, the main page will display the main event for the week and also ideas on what to do with your friends.",
+main_image: 'https://via.placeholder.com/600x400',  
+thumb_image: 'https://via.placeholder.com/350x200'
+)
+
+
+Portfolio.create!(
+title: "Design Teardown",
+subtitle: "#HTML and CSS: Design Teardown",
+body: "Baing on the User Interface we developed the app thinking first of the distribution of the elements before adding any content",
+main_image: 'https://via.placeholder.com/600x400',  
+thumb_image: 'https://via.placeholder.com/350x200'
+)
+
+Portfolio.create!(
+title: "LifeStyle Articles",
+subtitle: "Rails Capstone Project",
+body: "On this project, I was able to create a new app implementing the ERD diagram.
+Based on the ERD diagram I created all the tables for articles, likes, users, categories, and added an extra table to connect the categories with the articles as well called articlecategory.
+added devise for authentication for the users.
+Created a seed file that contains all of the articles, users, likes, and everything needed for the app to run
+added respect as well to comply with the TDD development side of the project
+implemented bootstrap, font awesome and previous knowledge from previous projects to complete this capstone.",
+main_image: 'https://via.placeholder.com/600x400',  
+thumb_image: 'https://via.placeholder.com/350x200'
+)
+
+Portfolio.create!(
+title: "Authentication",
+subtitle: "Project Rails / SQLite3",
+body: "The project is based on Authentication, meaning if a user is logged in will have the ability to create a new post, 
+if the user is not logged in he won't be able to",
+main_image: 'https://via.placeholder.com/600x400',  
+thumb_image: 'https://via.placeholder.com/350x200'
+)
+
+
+Portfolio.create!(
+title: "Building With Active Records",
+subtitle: "Using Active Records",
+body: "This project is about active records,models, and associations to the tests. 
+This application similar to Reddit (called Micro-Reddit) where a user can create a post and add comments to it.
+For each scenario, we are asked to write down the data, associations, and validations necessary to build it. 
+That means which models (data tables) will be necessary to store the data (and which columns you will need), 
+which fields of those tables will be subject to validation (e.g. minimum password length or username uniqueness).",
+main_image: 'https://via.placeholder.com/600x400',  
+thumb_image: 'https://via.placeholder.com/350x200'
+)
+
+Portfolio.create!(
+title: "Ciao! - The free speech social network",
+subtitle: "A free social metwork for sharing ideas without limitations",
+body: "App based on creating relantioships between user,
+have the ability to send friend request,
+accept or decline friend request,
+and display the post from user, and also count the likes for each post",
+main_image: 'https://via.placeholder.com/600x400',  
+thumb_image: 'https://via.placeholder.com/350x200'
+)
+
+Portfolio.create!(
+title: "Blog App",
+subtitle: "Postgres",
+body: "Project was about creating a blog using rails it has the functions of creating new blogs, editing and destroying blogs.",
+main_image: 'https://via.placeholder.com/600x400',  
+thumb_image: 'https://via.placeholder.com/350x200'
+)
+
+Portfolio.create!(
+title: "Video Player Page",
+subtitle: "YouTube Clone",
+body: "Project was based on creating a YouTubeClone.",
+main_image: 'https://via.placeholder.com/600x400',  
+thumb_image: 'https://via.placeholder.com/350x200'
+)
+
+Portfolio.create!(
+title: "Signup Page",
+subtitle: "Mints Signup Page Clone",
+body: "Project was based on creating a clone from Mints Signup Page",
+main_image: 'https://via.placeholder.com/600x400',  
+thumb_image: 'https://via.placeholder.com/350x200'
+)
+
+Portfolio.create!(
+title: "Private Events",
+subtitle: "Rails Association",
+body: "The project is based on Rails Asociations. 
+If a user is logged in will have the ability to create a new events and Invite users to that event, 
+if the user is not logged in he won't be able to",
+main_image: 'https://via.placeholder.com/600x400',  
+thumb_image: 'https://via.placeholder.com/350x200'
+)
+
+Portfolio.create!(
+title: "Forms Project",
+subtitle: "In this project we created a Form to gather information such as First Name, Last Name, Email, Phone, Twitter",
+body: "This project teaches the multiple ways to build a form in rails that can send parameters to a controller so 
+that it can build an instance of a model with those parameters.
+On this particular branch, we created model using the scaffold, we also use bootstrap to add some styling to the app.",
+main_image: 'https://via.placeholder.com/600x400',  
+thumb_image: 'https://via.placeholder.com/350x200'
+)
+
+Portfolio.create!(
+title: "Weather Project App",
+subtitle: "Building a Weather APP using an API",
+body: "This project was based mainly on creating a Weather APP, 
+implementing javascript, APIs",
+main_image: 'https://via.placeholder.com/600x400',  
+thumb_image: 'https://via.placeholder.com/350x200'
+)
 
 
 puts "Portoflios created with the Subject My Great Service #{Portfolio.all.count}"
 
-3.times do |portfolio_item|
-  Portfolio.create!(
-    title: "Portfolio title #{portfolio_item}",
-    subtitle: 'Ruby on Rails',
-    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-        do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-             aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-             in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-             Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-             officia deserunt mollit anim id est laborum.",
-      main_image: 'https://via.placeholder.com/600x400',
-      thumb_image: 'https://via.placeholder.com/350x200'
-             
-    
-  )
-end
 
-puts "Portoflios with Ruby on Rails Subject created #{Portfolio.all.count}"
+Technology.create(name:"Rails",portfolio_id:1)
+Technology.create(name:"Ruby",portfolio_id:1)
+Technology.create(name:"Bootstrap",portfolio_id:1)
+Technology.create(name:"Bootstrap",portfolio_id:2)
+Technology.create(name:"HTML",portfolio_id:2)
+Technology.create(name:"CSS",portfolio_id:2)
+Technology.create(name:"Rails",portfolio_id:1)
 
-2.times do |portfolio_item|
-  Portfolio.create!(
-    title: "Portfolio title #{portfolio_item}",
-    subtitle: 'Angular',
-    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-        do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-             aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-             in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-             Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-             officia deserunt mollit anim id est laborum.",
-             main_image: 'https://via.placeholder.com/600x400',
-             thumb_image: 'https://via.placeholder.com/350x200'
-             
-  )
-end
 
-puts "Portoflios created with the Subject Angular #{Portfolio.all.count}"
-
-3.times do |technology|
-  Portfolio.last.technologies.create!(
-    name: "Technology #{technology}"
-  )
-end
 puts "Technologies  created! #{Technology.all.count}"
