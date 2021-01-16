@@ -20,7 +20,7 @@ class PortfoliosController < ApplicationController
 
   def new
     @portfolios_items = Portfolio.new
-    3.times { @portfolios_items.technologies.build }
+    # 3.times { @portfolios_items.technologies.build }
   end
 
   def create

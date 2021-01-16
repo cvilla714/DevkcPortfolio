@@ -1,4 +1,4 @@
-// @import "./actiontext.scss";
+//= require actiontext.scss";
 @import "~bootstrap/scss/bootstrap";
 @import "@fortawesome/fontawesome-free";
 
@@ -100,7 +100,7 @@ body {
 }
 
 /*
- * Footer
+//  * Foote
  */
 .mastfoot {
   color: rgba(255, 255, 255, 0.5);

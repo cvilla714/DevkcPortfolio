@@ -5,7 +5,7 @@ class Blog < ApplicationRecord
   validates_presence_of :title, :body
   validates :title, length: { in: 4..100 }
   belongs_to :topic
-  has_rich_text :content
+  # has_rich_text :body
   belongs_to :author, class_name: 'User'
   validates :title, :body, presence: true
 
