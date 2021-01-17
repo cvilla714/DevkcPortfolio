@@ -1,10 +1,5 @@
 /* stylelint-disable selector-list-comma-newline-after */
 
-html {
-  position: relative;
-  min-height: 100%;
-}
-
 .blog-header {
   line-height: 1;
   border-bottom: 1px solid #e5e5e5;
@@ -91,8 +86,8 @@ h6 {
 }
 
 /*
-   * Blog posts
-   */
+ * Blog posts
+ */
 .blog-post {
   margin-bottom: 4rem;
 }
@@ -106,25 +101,15 @@ h6 {
 }
 
 /*
-   * Footer
-   */
+ * Footer
+ */
 .blog-footer {
   padding: 2.5rem 0;
   color: #999;
   text-align: center;
   background-color: #f9f9f9;
   border-top: 0.05rem solid #e5e5e5;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 100px;
-  // overflow:hidden;
-  width: inherit;
 }
 .blog-footer p:last-child {
   margin-bottom: 0;
-}
-
-.first {
-  background-color: yellow;
 }

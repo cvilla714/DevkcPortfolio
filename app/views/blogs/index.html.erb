@@ -2,7 +2,7 @@
       <div class="col px-0">
         <strong class="d-inline-block mb-2 text-warning"><%= Topic.find(3).title %></strong>
         <h1 class="display-4 font-italic"><%= Topic.find(3).blogs.order(created_at: :asc)[-1].title %></h1>
-        <p class="lead my-3"><%= truncate(Topic.find(3).blogs.order(created_at: :asc)[-1].body, length: 200)%> </p>
+        <p class="lead my-3"><%= markdown(truncate(Topic.find(3).blogs.order(created_at: :asc)[-1].body, length: 75))%> </p>
       
         <p class="lead mb-0"><%= link_to 'Continue reading...',blog_path(Topic.find(3).blogs.order(created_at: :asc)[-1].id)%></p>
       </div>
@@ -15,7 +15,7 @@
         <div class="col p-4 d-flex flex-column position-static">
           <strong class="d-inline-block mb-2 text-primary"><%= Topic.find(1).title %></strong>
           <h3 class="mb-0"><%= Topic.find(1).blogs.order(created_at: :asc)[-1].title %></h3>
-          <p class="card-text mb-auto"><%= truncate(Topic.find(1).blogs.order(created_at: :asc)[-1].body, length: 200)%></p>
+          <p class="card-text mb-auto"><%= markdown(truncate(Topic.find(1).blogs.order(created_at: :asc)[-1].body, length: 75))%></p>
           
           <p class="lead mb-0"><%= link_to 'Continue reading...',blog_path(Topic.find(1).blogs.order(created_at: :asc)[-1].id)%></p>
         </div>
@@ -30,7 +30,7 @@
         <div class="col p-4 d-flex flex-column position-static">
           <strong class="d-inline-block mb-2 text-success"><%= Topic.find(2).title %></strong>
           <h3 class="mb-0"><%= Topic.find(2).blogs.order(created_at: :asc)[-1].title %></h3>
-          <p class="mb-auto"><%= truncate(Topic.find(2).blogs.order(created_at: :asc)[-1].body, length: 200)%></p>
+          <p class="mb-auto"><%= markdown(truncate(Topic.find(2).blogs.order(created_at: :asc)[-1].body, length: 75))%></p>
           
           <p class="lead mb-0"><%= link_to 'Continue reading...',blog_path(Topic.find(2).blogs.order(created_at: :asc)[-1].id)%></p>
         </div>
