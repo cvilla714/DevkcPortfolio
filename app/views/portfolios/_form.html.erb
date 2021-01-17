@@ -33,14 +33,23 @@
   <hr class="bg-warning">
 
   <h2>Technologies used:</h2>
-  <div>
-  <%= form.fields_for :technologies do |technology_form| %>
-    <div class="form-group">
-    <%= technology_form.label :name %>
-    <%= technology_form.text_field :name,class:"form-control" %>
+    <div class="field form-group">
+      <%# form.label :technology_id %>
+      <%#form.collection_select :technologies, Technology.order(:name), :id, :name,class:"form-control"  %>
+      <%#form.collection_select :technologies, Technology.order(:name), :id, :name,class:"form-control"  %>
+      <%#form.collection_select :technologies, Technology.order(:name), :id, :name,class:"form-control"  %>
+       <%# form.select(:techology, @technologies.collect {|p| [ p.name, p.id ] }, 
+                                           { :prompt => "Please select"}, 
+                                           { :multiple => true, :size => 5 }) %>
+    <div>
+        <%= form.fields_for :technologies do |technology_form| %>
+        <div class="form-group">
+        <%= technology_form.label :name %>
+        <%= technology_form.text_field :name,class:"form-control" %>
+        </div>
+        <% end %>
+      </div>
     </div>
-    <% end %>
-  </div>
 
   <div class="actions">
     <%= form.submit 'Save Portfolio', class:"btn btn-primary btn-block"%>

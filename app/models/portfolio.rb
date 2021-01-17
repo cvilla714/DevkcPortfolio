@@ -8,7 +8,9 @@ class Portfolio < ApplicationRecord
   validates :title, length: { in: 5..100 }
 
   accepts_nested_attributes_for :technologies,
-                                reject_if: ->(attrs) { attrs['name'].blank? }
+                                reject_if: ->(attrs) { attrs['name'].blank? }, allow_destroy: true
+
+  # accepts_nested_attributes_for :technologies,allow_destroy: true
 
   #   def self.angular
   # where(subtitle: 'Angular')

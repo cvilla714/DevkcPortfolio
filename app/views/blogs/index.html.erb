@@ -28,7 +28,7 @@
     <div class="col-md-6">
       <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
         <div class="col p-4 d-flex flex-column position-static">
-          <strong class="d-inline-block mb-2 text-success"><%= Topic.find(2).title %></strong>
+          <strong class="d-inline-block mb-2 text-danger"><%= Topic.find(2).title %></strong>
           <h3 class="mb-0"><%= Topic.find(2).blogs.order(created_at: :asc)[-1].title %></h3>
           <p class="mb-auto"><%= markdown(truncate(Topic.find(2).blogs.order(created_at: :asc)[-1].body, length: 75))%></p>
           
@@ -40,7 +40,7 @@
       </div>
     </div>
 </div>
-    
-<div class="pb-5">
+
+<div class="py-5">
 <h2><%= link_to 'Write A New Blog', new_blog_path if logged_in?(:site_admin) %></h2>
 </div>

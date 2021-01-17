@@ -20,7 +20,7 @@ class PortfoliosController < ApplicationController
 
   def new
     @portfolios_items = Portfolio.new
-    # 3.times { @portfolios_items.technologies.build }
+    3.times { @portfolios_items.technologies.build }
   end
 
   def create
@@ -44,7 +44,7 @@ class PortfoliosController < ApplicationController
     respond_to do |format|
       # if @portfolios_items.update(params.require(:portfolio).permit(:title, :subtitle, :body))
       if @portfolios_items.update(portfolio_params)
-        format.html { redirect_to portfolios_path, notice: 'Blog was successfully updated.' }
+        format.html { redirect_to portfolios_path, notice: 'Portfolio was successfully updated.' }
         format.json { render :show, status: :ok, location: @portfolios_items }
       else
         format.html { render :edit }
@@ -58,7 +58,7 @@ class PortfoliosController < ApplicationController
   def destroy
     @portfolios_items.destroy
     respond_to do |format|
-      format.html { redirect_to portfolios_url, notice: 'Blog was successfully destroyed.' }
+      format.html { redirect_to portfolios_url, notice: 'Portfolio was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -75,6 +75,6 @@ class PortfoliosController < ApplicationController
                                       :body,
                                       :portfolio_image,
                                       # portfolio_image:[],
-                                      technologies_attributes: [:name])
+                                      technologies_attributes: [:name,:destroy])
   end
 end
