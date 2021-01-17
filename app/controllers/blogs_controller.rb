@@ -100,12 +100,4 @@ class BlogsController < ApplicationController
   def blog_params
     params.require(:blog).permit(:title, :body, :topic_id, :author_id)
   end
-
-  # def display_topics
-  # @topics = Topics.all.order(:id)
-  # end
-
-  # def add_topic
-  # blog_params['topic_id']
-  # end
 end

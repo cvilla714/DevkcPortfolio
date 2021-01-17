@@ -54,4 +54,5 @@ gem 'hirb', '~> 0.7.3'
 gem 'image_processing', '~> 1.2'
 gem 'mini_magick', '~> 4.11'
 gem 'petergate', '~> 2.0', '>= 2.0.1'
+gem 'redcarpet', '~> 3.5', '>= 3.5.1'
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
