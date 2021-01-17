@@ -1,0 +1,33 @@
+
+<div class="container bg-white">
+<p id="notice"><%= notice %></p>
+
+
+<h1 class="text-center text-primary">Technologies</h1>
+
+<table  class="table main">
+  <thead class="thead-dark text-center">
+    <tr>
+      <th>Title</th>
+      <th>ID</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody class="text-center">
+    <% @technologies.each do |tech| %>
+      <tr>
+        <td><%= tech.name %></td>
+        <td><%= tech.portfolio_id %></td>
+        <td><%= link_to 'Show', tech %></td>
+        <td><%= link_to 'Edit', edit_technology_path(tech) %></td>
+        <td><%= link_to 'Destroy', tech, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Topic', new_technology_path,class:"btn btn-info btn-block" %>
+</div>

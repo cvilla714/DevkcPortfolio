@@ -22,6 +22,7 @@ Rails.application.routes.draw do
     end
   end
   resources :topics
+  resources :technologies
 
   root to: 'pages#home' # this will replace this code  # get 'pages/home'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
