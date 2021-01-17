@@ -128,45 +128,67 @@ Blog.create(
   )
 
   Blog.create(
-  title: "My Blog Post 7",
-  body: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-  accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
-  ab illo inventore veritatis et quasi architecto beatae vitae dicta
-  sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur
-  aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
-  voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum
-  quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam
-  eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
-  voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem
-  ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi
-  consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate
-   velit esse quam nihil molestiae consequatur, vel illum qui dolorem
-   eum fugiat quo voluptas nulla pariatur?",
-  topic_id: 1,
-  author_id:2
-  )
+    title: "What is HTML?",
+    body: "Well if you are staring your journey as a developer this is one of the first things you will need to learn, so grab a cup of coffee and relax so you can enjoy the reading
+    ###**HTML Stand for Hypertext Markup Language**
+    Is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets and scripting languages such as JavaScrip
+    **So What do I need it for ?**
+      
+    1. Design an Awesome Email for Your Customers
+    Email is turning out to be one of the best online marketing tools out there. And you can make an email that your customers will actually look forward to getting by organizing and styling it using the HTML and CSS editors available with most email marketing services.
+      
+    2. Create a Stunning Corporate Newsletter
+    Now that you’ve impressed with those gorgeous emails, take it to the next level with a newsletter template. HTML and CSS will be your secret weapons once again as you lay out and customize the template to fit right in with your corporate brand and style.
+      
+    3. Tweak Your Company’s WordPress site
+    A surprisingly high percentage of corporate websites are built on WordPress. And this is good news for you when you know some HTML and CSS, because you can use them to add content and make changes to your company’s site. That means no more waiting around for your overworked web team to update the office calendar!
+      
+    4. Teach Your Colleague (or Boss!) Some Code
+    Speaking of overworked co-workers, how about sharing the HTML and CSS love with your colleagues (or even your supervisor)? Then everyone on your team will be able to update and improve the website, emails, and newsletters. Ahh, the joy of delegation!
+      
+    5. Make Your Technical Team Adore You
+    The developers in your working life will thank you if you understand even a hint of HTML and CSS. You’ll know how to tell them what needs to be changed on the company site (instead of referring to everything as a “whatchamacallit” or “thingamajig”) as well as be more aware of the limits and possibilities they face every day.
+      
+    6. Show Off Your Skills With a Perfectly-Tuned Tumblr Blog
+    Want to leave that adoring team behind and turn your passion into your profession? It’s easy enough to set up a Tumblr blog to show off that side hustle you’ve been working on. If you want to send a dazzling display of your freelance photography or graphic design work to that agency that’s hiring, you can! Just a bit of HTML and CSS can take a Tumblr template from so-so to stunning.
+      
+    7. Build a Professional Resume Site—From Scratch!
+    Go beyond just a Tumblr blog and really show some initiative by coding your own online presence from start to finish. It might sound daunting, but it’s actually surprisingly easy to create a simple but great-looking site with basic HTML and CSS. And, boy, will you knock the socks off potential employers when you tell them you did it all on your own!
+      
+    8. Take Your Design Skills to the Next Level
+    So you’re already a Photoshop wizard, and you can even create some impressive website mockups. Well, get some HTML and CSS under your belt, and you’ll be able to turn those mockups into actual sites. You can become the “unicorn” (a designer who can code) every company is looking for right now.
+      
+    9. Start Learning More—and Earning More!
+    Like I said at the start, HTML and CSS are the foundation of the web. So, they’re also the foundation for taking your tech skills to the next level. Having a handle on the fundamentals will make learning another programming language (like JavaScript, Ruby, or PHP) a whole lot easier. And the more you know, the more job opportunities will open up for you
+    ",
+    topic_id: 1,
+    author_id:3
+    )
+
+
 
   Blog.create(
-  title: "My Blog Post 8",
-  body: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-  accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
-  ab illo inventore veritatis et quasi architecto beatae vitae dicta
-  sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur
-  aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
-  voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum
-  quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam
-  eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
-  voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem
-  ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi
-  consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate
-   velit esse quam nihil molestiae consequatur, vel illum qui dolorem
-   eum fugiat quo voluptas nulla pariatur?",
-  topic_id: 2,
-  author_id:3
-  )
+    title: "How to install Ruby",
+    body: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+    accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
+    ab illo inventore veritatis et quasi architecto beatae vitae dicta
+    sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur
+    aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
+    voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum
+    quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam
+    eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
+    voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem
+    ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi
+    consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate
+     velit esse quam nihil molestiae consequatur, vel illum qui dolorem
+     eum fugiat quo voluptas nulla pariatur?",
+    topic_id: 2,
+    author_id:2
+    )
+
 
   Blog.create(
-  title: "My Blog Post 9",
+  title: "How To Install Rails easily",
   body: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem
   accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
   ab illo inventore veritatis et quasi architecto beatae vitae dicta
@@ -220,12 +242,15 @@ thumb_image: 'https://via.placeholder.com/350x200'
 )
 
 Portfolio.create!(
-title: "Building with Responsive Design",
-subtitle: "Using Media Queries",
-body: "#HTML & CSS: Building with Responsive Design
-This project consists of replicating the website The Next Web website.
-Putting emphasis on how it behaves differently depending on the size of the screen where the website is rendered.
-We adjusted the breakpoints for desktops, laptops, iPads, and iPhones",
+title: "New York Times Article",
+subtitle: "Clone",
+body: "***Clone a New York Times Article***
+
+Applying for most of it 
+* Floating and Positioning 
+* Rearrange elements 
+* And Use of media queries
+",
 
 main_image: 'https://via.placeholder.com/600x400',  
 thumb_image: 'https://via.placeholder.com/350x200'
@@ -352,13 +377,51 @@ thumb_image: 'https://via.placeholder.com/350x200'
 puts "Portoflios created with the Subject My Great Service #{Portfolio.all.count}"
 
 
-Technology.create(name:"Rails",portfolio_id:1)
-Technology.create(name:"Ruby",portfolio_id:1)
+Technology.create(name:"HTML",portfolio_id:1)
+Technology.create(name:"CSS",portfolio_id:1)
 Technology.create(name:"Bootstrap",portfolio_id:1)
-Technology.create(name:"Bootstrap",portfolio_id:2)
-Technology.create(name:"HTML",portfolio_id:2)
-Technology.create(name:"CSS",portfolio_id:2)
-Technology.create(name:"Rails",portfolio_id:1)
-
+Technology.create(name:"Javascript",portfolio_id:1)
+Technology.create(name:"Ruby",portfolio_id:2)
+Technology.create(name:"Rspect gem",portfolio_id:2)
+Technology.create(name:"Colorized gem",portfolio_id:2)
+Technology.create(name:"HTML",portfolio_id:3)
+Technology.create(name:"CSS",portfolio_id:3)
+Technology.create(name:"Float",portfolio_id:3)
+Technology.create(name:"CSS-FlexBox",portfolio_id:3)
+Technology.create(name:"HTML",portfolio_id:4)
+Technology.create(name:"CSS",portfolio_id:4)
+Technology.create(name:"Bootstrap",portfolio_id:4)
+Technology.create(name:"HTML",portfolio_id:5)
+Technology.create(name:"CSS",portfolio_id:5)
+Technology.create(name:"CSS-FlexBox",portfolio_id:5)
+Technology.create(name:"Ruby",portfolio_id:6)
+Technology.create(name:"Rails",portfolio_id:6)
+Technology.create(name:"Bootstrap",portfolio_id:6)
+Technology.create(name:"PostgreSQL",portfolio_id:6)
+Technology.create(name:"Ruby",portfolio_id:7)
+Technology.create(name:"Rails",portfolio_id:7)
+Technology.create(name:"SQLite3",portfolio_id:7)
+Technology.create(name:"Ruby",portfolio_id:8)
+Technology.create(name:"Rails",portfolio_id:8)
+Technology.create(name:"SQLite3",portfolio_id:8)
+Technology.create(name:"Ruby",portfolio_id:9)
+Technology.create(name:"Rails",portfolio_id:9)
+Technology.create(name:"PostgreSQL",portfolio_id:9)
+Technology.create(name:"PostgreSQL",portfolio_id:10)
+Technology.create(name:"Ruby",portfolio_id:10)
+Technology.create(name:"Rails",portfolio_id:10)
+Technology.create(name:"HTML",portfolio_id:11)
+Technology.create(name:"CSS",portfolio_id:11)
+Technology.create(name:"HTML",portfolio_id:12)
+Technology.create(name:"CSS",portfolio_id:12)
+Technology.create(name:"Ruby",portfolio_id:13)
+Technology.create(name:"Rails",portfolio_id:13)
+Technology.create(name:"Boootstrap",portfolio_id:13)
+Technology.create(name:"SQLite3",portfolio_id:13)
+Technology.create(name:"Ruby",portfolio_id:14)
+Technology.create(name:"Rails",portfolio_id:14)
+Technology.create(name:"HTML",portfolio_id:15)
+Technology.create(name:"CSS",portfolio_id:15)
+Technology.create(name:"Javascript",portfolio_id:15)
 
 puts "Technologies  created! #{Technology.all.count}"
