@@ -50,17 +50,17 @@ class BlogsController < ApplicationController
   # PATCH/PUT /blogs/1
   # PATCH/PUT /blogs/1.json
   def update
-    @blog = Blog.new
-    @blog.author_id = current_user.id
-    @blog.title = blog_params[:title]
-    @blog.body = blog_params[:body]
-    @blog.topic_id = blog_params[:topic_id]
+    # @blog = Blog.new
+    # @blog.author_id = current_user.id
+    # @blog.title = blog_params[:title]
+    # @blog.body = blog_params[:body]
+    # @blog.topic_id = blog_params[:topic_id]
 
     respond_to do |format|
-      if @blog.save
+      # if @blog.save
         # if @blog.update
         #  @blog.topic.delete.all
-        # if @blog.update(blog_params)
+        if @blog.update(blog_params)
         format.html { redirect_to @blog, notice: 'Blog was successfully updated.' }
         format.json { render :show, status: :ok, location: @blog }
       else
