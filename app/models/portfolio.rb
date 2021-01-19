@@ -1,5 +1,5 @@
 class Portfolio < ApplicationRecord
-  # include Placeholder
+  include Placeholder
   has_many :technologies, dependent: :destroy
   validates :title, :body, presence: true
   validates :title, length: { in: 5..25 }
