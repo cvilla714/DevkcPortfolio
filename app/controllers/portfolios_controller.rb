@@ -1,7 +1,7 @@
 # rubocop:disable Layout/LineLength
 class PortfoliosController < ApplicationController
   before_action :set_portfolios_items, only: %i[edit show update destroy]
-  # layout 'portfolio'
+  # layout 'portfolios'
   access all: %i[show index], user: { except: %i[destroy new edit update edit create] }, site_admin: :all
   def index
     # @portfolios_items = Portfolio.all
