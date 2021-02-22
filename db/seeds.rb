@@ -216,7 +216,7 @@ body: "This project consists of replicating the website Newsweek.
 We used Bootstrap version 4.5 for the most part
 The content can be viewed on small screen sizes and all the way up to extra-large displays
 We also worked on the positioning of the elements",
-main_image:"../app/assets/images/newsweek.png"
+main_image:"newsweek.png"
 )
 
 Portfolio.create!(
@@ -235,7 +235,7 @@ evaluating that there are comments
 evaluating if the method created catches and missing an initial period
 evaluates that the methods is looking for missing semicolons
 evaluates the method that tests once the file doesn't return errors",
-main_image:"../app/assets/images/linters.png"
+main_image:"linters.png"
 )
 
 Portfolio.create!(
@@ -248,7 +248,7 @@ Applying for most of it
 * Rearrange elements 
 * And Use of media queries
 ",
-main_image:"../app/assets/images/newyork.png"
+main_image:"newyork.png"
 )
 
 Portfolio.create!(
@@ -256,7 +256,9 @@ title: "Directory Of Events",
 subtitle: "HTML/CSS Capstone",
 body: "The design was inspired on the Mathew Njuguna patashuleKE design, I choose to go with a Directory of Events where I am giving back to the user a list of sports events that will take place either the current day, the day after, and over the weekend.
 It consists of a total of 3 pages, the main page will display the main event for the week and also ideas on what to do with your friends.",
-main_image: "../app/assets/images/htmlcapstone.png"
+main_image: "htmlcapstone.png"
+
+
 )
 
 
@@ -264,7 +266,9 @@ Portfolio.create!(
 title: "Design Teardown",
 subtitle: "#HTML and CSS: Design Teardown",
 body: "Baing on the User Interface we developed the app thinking first of the distribution of the elements before adding any content",
-main_image:"../app/assets/images/designteardown.png"
+main_image:"designteardown.png"
+
+
 )
 
 Portfolio.create!(
@@ -276,7 +280,9 @@ added devise for authentication for the users.
 Created a seed file that contains all of the articles, users, likes, and everything needed for the app to run
 added respect as well to comply with the TDD development side of the project
 implemented bootstrap, font awesome and previous knowledge from previous projects to complete this capstone.",
-main_image:"../app/assets/images/railscapstone.png"
+main_image:"railscapstone.png"
+
+
 )
 
 Portfolio.create!(
@@ -284,7 +290,8 @@ title: "Authentication",
 subtitle: "Project Rails / SQLite3",
 body: "The project is based on Authentication, meaning if a user is logged in will have the ability to create a new post, 
 if the user is not logged in he won't be able to",
-main_image: "../app/assets/images/authentication.png"
+main_image: "authentication.png"
+
 )
 
 
@@ -296,7 +303,8 @@ This application similar to Reddit (called Micro-Reddit) where a user can create
 For each scenario, we are asked to write down the data, associations, and validations necessary to build it. 
 That means which models (data tables) will be necessary to store the data (and which columns you will need), 
 which fields of those tables will be subject to validation (e.g. minimum password length or username uniqueness).",
-main_image:"../app/assets/images/activerecords.png"
+main_image:"activerecords.png"
+
 )
 
 Portfolio.create!(
@@ -306,28 +314,33 @@ body: "App based on creating relantioships between user,
 have the ability to send friend request,
 accept or decline friend request,
 and display the post from user, and also count the likes for each post",
-main_image: "../app/assets/images/ciao.png"
+main_image: "ciao.png"
+
+
 )
 
 Portfolio.create!(
 title: "Blog App",
 subtitle: "Postgres",
 body: "Project was about creating a blog using rails it has the functions of creating new blogs, editing and destroying blogs.",
-main_image:"../app/assets/images/blogapp.png"
+main_image:"blogapp.png"
+
 )
 
 Portfolio.create!(
 title: "Video Player Page",
 subtitle: "YouTube Clone",
 body: "Project was based on creating a YouTubeClone.",
-main_image:"../app/assets/images/youtube.png"
+main_image:"youtube.png"
+
 )
 
 Portfolio.create!(
 title: "Signup Page",
 subtitle: "Mints Signup Page Clone",
 body: "Project was based on creating a clone from Mints Signup Page",
-main_image:"../app/assets/images/signupmint.png"
+main_image:"signupmint.png"
+
 )
 
 Portfolio.create!(
@@ -336,7 +349,8 @@ subtitle: "Rails Association",
 body: "The project is based on Rails Asociations. 
 If a user is logged in will have the ability to create a new events and Invite users to that event, 
 if the user is not logged in he won't be able to",
-main_image: "../app/assets/images/privateevents.png"
+main_image: "privateevents.png"
+
 )
 
 Portfolio.create!(
@@ -345,7 +359,8 @@ subtitle: "In this project we created a Form to gather information such as First
 body: "This project teaches the multiple ways to build a form in rails that can send parameters to a controller so 
 that it can build an instance of a model with those parameters.
 On this particular branch, we created model using the scaffold, we also use bootstrap to add some styling to the app.",
-main_image: "../app/assets/images/formproject.png"
+main_image: "formproject.png"
+
 )
 
 Portfolio.create!(
@@ -353,7 +368,8 @@ title: "Weather Project App",
 subtitle: "Building a Weather APP using an API",
 body: "This project was based mainly on creating a Weather APP, 
 implementing javascript, APIs",
-main_image: "../app/assets/images/weatherapp.png"
+main_image: "weatherapp.png"
+
 )
 
 
