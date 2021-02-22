@@ -3,7 +3,7 @@
 Rails.application.routes.draw do
   devise_for :users, path: '', path_names: { sign_up: 'register', sign_in: 'login', sign_out: 'logout' }
   resources :users
-  resources :portfolios, except: [:show]
+  resources :portfolios
   get 'angular-items', to: 'portfolios#angular'
   get 'rails-items', to: 'portfolios#rails'
   get 'service-items', to: 'portfolios#service'
