@@ -75,6 +75,6 @@ class PortfoliosController < ApplicationController
                                       :body,
                                       :portfolio_image,
                                       # portfolio_image:[],
-                                      technologies_attributes: [:name,:destroy])
+                                      technologies_attributes: %i[name destroy])
   end
 end
