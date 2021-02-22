@@ -4,7 +4,7 @@ module PortfoliosHelper
 
   # end
   #
-  # def portfolio_img(img, type)
+  # def portfolio_imgimg, type)
   # if img.model.main_image? || img.model.thumb_image?
   # img
   # elsif type == 'thumb'
@@ -13,4 +13,13 @@ module PortfoliosHelper
   # image_genertor(height: '600', width: '400')
   # end
   # end
+  # portfolio_item = @portfolios_items
+  # render partial: 'portfolio_item', collection: @portfolios_items
+  def check_img(port)
+    @img = if port.portfolio_image.present?
+             port.portfolio_image
+           elsif port.main_image.present?
+             port.main_image
+    end
+  end
 end
