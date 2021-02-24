@@ -20,6 +20,6 @@ module PortfoliosHelper
              port.portfolio_image
            elsif port.main_image.present?
              port.main_image
-    end
+           end
   end
 end
