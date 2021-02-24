@@ -208,166 +208,287 @@ Blog.create(
 
 puts "Blog post created #{Blog.all.count}"
 
-
 Portfolio.create!(
 title: "Building a Clone for  the Newsweek Website",
 subtitle: 'Using Bootstrap Framework',
-body: "This project consists of replicating the website Newsweek.
+body: "
+This project consists of replicating the website Newsweek.
 We used Bootstrap version 4.5 for the most part
 The content can be viewed on small screen sizes and all the way up to extra-large displays
-We also worked on the positioning of the elements",
+We also worked on the positioning of the elements
+**[Live Version](https://github.com/cvilla714/bootstrap)**
+*[Source code](https://cvilla714.github.io/bootstrap/)*
+",
 main_image:"newsweek.png"
 )
 
 Portfolio.create!(
 title: "Linter for CSS",
 subtitle: 'Ruby Capstone',
-body: "The project is based on creating a linter for CSS
-It opens the file that is given in the terminal and the code will read line by line
-it will look for the errors, I concentrated on looking for
-the missing initial period at the beginning of the line to call the class
-it searches for missing semicolons at the end of every line
-it also searches for comments that were left on the code
-I also created the rspecs for the TDD approach I did a total of 5 test
+body: "
+***The project is based on creating a linter for CSS***
+- It opens the file that is given in the terminal and the code will read line by line
+- it will look for the errors, I concentrated on looking for
+- the missing initial period at the beginning of the line to call the class
+- it searches for missing semicolons at the end of every line
+- it also searches for comments that were left on the code
 
-evaluating that the file exists
-evaluating that there are comments
-evaluating if the method created catches and missing an initial period
-evaluates that the methods is looking for missing semicolons
-evaluates the method that tests once the file doesn't return errors",
+I also created the rspecs for the TDD approach I did a total of 5 test
+- Evaluating that the file exists
+- Evaluating that there are comments
+- Evaluating if the method created catches and missing an initial period
+- Evaluates that the methods is looking for missing semicolons
+- Evaluates the method that tests once the file doesn't return errors
+
+*[Source code](https://github.com/cvilla714/linterproject)*
+",
 main_image:"linters.png"
 )
 
 Portfolio.create!(
 title: "New York Times Article",
 subtitle: "Clone",
-body: "***Clone a New York Times Article***
+body: "
+***Clone a New York Times Article***
 
 Applying for most of it 
-* Floating and Positioning 
-* Rearrange elements 
-* And Use of media queries
+- Floating and Positioning 
+- Rearrange elements 
+- And Use of media queries
+
+**[Live Version](https://cvilla714.github.io/floating/)**
+*[Source code](https://github.com/cvilla714/floating)*
 ",
 main_image:"newyork.png"
 )
 
+
+
 Portfolio.create!(
 title: "Directory Of Events",
 subtitle: "HTML/CSS Capstone",
-body: "The design was inspired on the Mathew Njuguna patashuleKE design, I choose to go with a Directory of Events where I am giving back to the user a list of sports events that will take place either the current day, the day after, and over the weekend.
-It consists of a total of 3 pages, the main page will display the main event for the week and also ideas on what to do with your friends.",
+body: "
+**The design was inspired on the Mathew Njuguna patashuleKE design**
+ I choose to go with a Directory of Events where I am giving back to the user a list of sports events that will take place either the current day, the day after, and over the weekend.
+It consists of a total of 3 pages, the main page will display the main event for the week and also ideas on what to do with your friends.
+
+**[Live Version](https://cvilla714.github.io/htmlcapstoneproject/index.html)**
+*[Source code](https://github.com/cvilla714/htmlcapstoneproject)*
+",
 main_image: "htmlcapstone.png"
 
-
 )
+
 
 
 Portfolio.create!(
 title: "Design Teardown",
-subtitle: "#HTML and CSS: Design Teardown",
-body: "Baing on the User Interface we developed the app thinking first of the distribution of the elements before adding any content",
+subtitle: "HTML and CSS: Design Teardown",
+body: "
+*Based on the User Interface*
+ We developed the app thinking first of the distribution of the elements before adding any content
+This way we could see how to align and position all elements on the page and working on re-arranging the elements if needed to give the user a better experience.
+
+**[Live Version](https://bigwizzo.github.io/heatmap/)**
+*[Source code](https://github.com/BigWizzo/heatmap)*
+",
 main_image:"designteardown.png"
 
-
 )
+
+
 
 Portfolio.create!(
 title: "LifeStyle Articles",
 subtitle: "Rails Capstone Project",
-body: "On this project, I was able to create a new app implementing the ERD diagram.
-Based on the ERD diagram I created all the tables for articles, likes, users, categories, and added an extra table to connect the categories with the articles as well called articlecategory.
-added devise for authentication for the users.
-Created a seed file that contains all of the articles, users, likes, and everything needed for the app to run
-added respect as well to comply with the TDD development side of the project
-implemented bootstrap, font awesome and previous knowledge from previous projects to complete this capstone.",
+body: "
+*On this project, I was able to create a new app implementing the ERD diagram.*
+
+Based on the ERD diagram I created all the tables for
+- articles
+- likes
+- users
+- categories
+- and added an extra table to connect the categories with the articles as well called articlecategory.
+
+*For authentication, I added devise*
+
+For creating content I created  a seed file that contains all of the articles, users, likes, and everything needed for the app to run
+
+Also added respect as well to comply with the TDD development side of the project. And integrated bootstrap, font awesome, and previous knowledge from previous projects to complete this capstone.
+
+**[Live Version](https://morning-island-07101.herokuapp.com/)**
+*[Source code](https://github.com/cvilla714/rails-capstone/tree/ready)*
+",
 main_image:"railscapstone.png"
 
-
 )
+
+
+
 
 Portfolio.create!(
 title: "Authentication",
 subtitle: "Project Rails / SQLite3",
-body: "The project is based on Authentication, meaning if a user is logged in will have the ability to create a new post, 
-if the user is not logged in he won't be able to",
-main_image: "authentication.png"
+body: "
+***The project is based on Authentication***
+Basically created an app that if the user is logged in  will have the ability to create a new post, **if the user is not logged in he won't be able to**
 
+*[Source code](https://github.com/cvilla714/authentication/tree/feature-branch)*
+",
+main_image: "authentication.png"
 )
+
+
 
 
 Portfolio.create!(
 title: "Building With Active Records",
 subtitle: "Using Active Records",
-body: "This project is about active records,models, and associations to the tests. 
-This application similar to Reddit (called Micro-Reddit) where a user can create a post and add comments to it.
+body: "
+***This project is about active records,models, and associations*** 
+
+This application is similar to a project called Reddit (called Micro-Reddit) where a user can create a post and add comments to it.
+
 For each scenario, we are asked to write down the data, associations, and validations necessary to build it. 
+
 That means which models (data tables) will be necessary to store the data (and which columns you will need), 
-which fields of those tables will be subject to validation (e.g. minimum password length or username uniqueness).",
+which fields of those tables will be subject to validation (e.g. minimum password length or username uniqueness).
+
+*[Source code](https://github.com/cvilla714/building_with_active_record/tree/workingbranch)*
+",
 main_image:"activerecords.png"
 
 )
 
+
+
+
 Portfolio.create!(
 title: "Ciao! - The free speech social network",
 subtitle: "A free social metwork for sharing ideas without limitations",
-body: "App based on creating relantioships between user,
-have the ability to send friend request,
-accept or decline friend request,
-and display the post from user, and also count the likes for each post",
+body:
+ "
+***App based on creating relantioships between user***
+
+On this paohave the ability to 
+1. send a friend request
+2. accept or decline friend request
+3. display the post from the user
+4. and also count the likes for each post
+
+**[Live Version](https://ciao-social-ror.herokuapp.com/)**
+*[Source code](https://github.com/elberthcorniell/ciao-social-ror)*
+",
+
 main_image: "ciao.png"
 
-
 )
+
+
 
 Portfolio.create!(
 title: "Blog App",
 subtitle: "Postgres",
-body: "Project was about creating a blog using rails it has the functions of creating new blogs, editing and destroying blogs.",
+body:
+ "
+***Project was about creating a blog***
+
+Using rails has the functions of creating new blogs, editing, and destroying blogs.
+*[Source code](https://github.com/cvilla714/BlogApp/tree/working)*
+
+",
 main_image:"blogapp.png"
 
 )
 
+
+
 Portfolio.create!(
 title: "Video Player Page",
 subtitle: "YouTube Clone",
-body: "Project was based on creating a YouTubeClone.",
+body: 
+"
+***Project was based on creating a YouTubeClone.***
+
+Looking at the positioning of the elements, and how the elements behave once the image is resized from mobile to desktop versions
+
+**[Live Version](https://rawcdn.githack.com/cvilla714/YouTube/e08a58da39a261e1a9cd4272bbf3091ff7ef8063/index.html)**
+*[Source code](https://github.com/cvilla714/YouTube)*
+
+",
 main_image:"youtube.png"
 
 )
 
+
+
 Portfolio.create!(
 title: "Signup Page",
 subtitle: "Mints Signup Page Clone",
-body: "Project was based on creating a clone from Mints Signup Page",
-main_image:"signupmint.png"
+body:
+ "
+***Project was based on creating a clone from Mints Signup Page***
 
+The idea behind the project was to be able to grab the elements from the page like images and position it exactly the same following the structure of the original page.
+
+**[Live Version](https://rawcdn.githack.com/hamayun-cpu/HtmlForm/a78aee5194c1651861d3d210cf8a00a0388057d4/index.html)**
+*[Source code](https://github.com/hamayun-cpu/HtmlForm)*
+",
+main_image:"signupmint.png"
 )
+
 
 Portfolio.create!(
 title: "Private Events",
 subtitle: "Rails Association",
-body: "The project is based on Rails Asociations. 
-If a user is logged in will have the ability to create a new events and Invite users to that event, 
-if the user is not logged in he won't be able to",
+body: 
+"
+***The project is based on Rails Asociations. ***
+
+ The main goal with the project was to achieve that **If a user is logged in** *will have the ability to create a new events and Invite users to that event*
+
+*if the user is not logged in he won't be able to*
+
+*[Source code](https://github.com/elberthcorniell/private-events/tree/asociations)*
+",
 main_image: "privateevents.png"
 
 )
 
+
+
+
 Portfolio.create!(
 title: "Forms Project",
-subtitle: "In this project we created a Form to gather information such as First Name, Last Name, Email, Phone, Twitter",
-body: "This project teaches the multiple ways to build a form in rails that can send parameters to a controller so 
-that it can build an instance of a model with those parameters.
-On this particular branch, we created model using the scaffold, we also use bootstrap to add some styling to the app.",
+subtitle: "In this project we created a Form to gather personal information",
+body: 
+"
+***This project teaches the multiple ways to build a form in rails***
+
+ That can send parameters to a controller so that it can build an instance of a model with those parameters.
+
+ The styling of the app was done by applying Bootstrap.
+
+*[Source code](https://github.com/410AngelaVu/Forms-Project/tree/working-branch)*
+
+",
 main_image: "formproject.png"
 
 )
 
+
+
 Portfolio.create!(
 title: "Weather Project App",
 subtitle: "Building a Weather APP using an API",
-body: "This project was based mainly on creating a Weather APP, 
-implementing javascript, APIs",
+body: "
+***This project was based mainly on creating a Weather APP***
+The core of the project was to learn how to use and interact with APIs and how to retrieve the information to be able to use it to render back to the user the desired information.
+
+**[Live Version](https://cvilla714.github.io/weather_project/)**
+*[Source code](https://github.com/cvilla714/weather_project)*
+",
 main_image: "weatherapp.png"
 
 )
