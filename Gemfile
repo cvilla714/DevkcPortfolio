@@ -44,9 +44,6 @@ group :development do
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'aws-sdk-s3', require: false
-gem 'carrierwave', '~> 2.1'
-gem 'carrierwave-aws', '~> 1.5'
 gem 'devise', '~> 4.7', '>= 4.7.3'
 gem 'dotenv-rails', '~> 2.7', '>= 2.7.6'
 gem 'friendly_id', '~> 5.4.0'
