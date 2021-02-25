@@ -1,7 +1,7 @@
 class Portfolio < ApplicationRecord
   # include Placeholder
   # has_rich_text :body
-  has_one_attached :portfolio_image
+  has_one_attached :portfolio_image 
   # has_many_attached :portfolio_image
   has_many :technologies, dependent: :destroy
   validates :title, :body, presence: true
