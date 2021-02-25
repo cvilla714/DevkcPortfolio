@@ -16,3 +16,4 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 # Rails.application.config.assets.precompile += %w( admin.js admin.css )
 Rails.application.config.assets.precompile += %w[blogs.scss]
 Rails.application.config.assets.precompile += %w[portfolios.scss]
+Rails.application.config.assets.precompile += %w[album.scss]
