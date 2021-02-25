@@ -1,9 +1,11 @@
 
 <div class="col-md-4">
   <div class="card mb-4 shadow-sm" data-id="<%= portfolio_item.id %>">
-    <% @porta = portfolio_item %>
-    <%check_img(@porta)%>
-    <%= image_tag(@img,  class: "pimage")%>
+    <%# @porta = portfolio_item %>
+    <%#check_img(@porta)%>
+    <%# image_tag(@img,  class: "pimage")%>
+    <%= image_tag(portfolio_item.main_image) unless portfolio_item.main_image.nil?%>
+
     <div class="card-body">
       <%# <p class="card-text"><span>link_to portfolio_item.title, portfolio_show_path(portfolio_item.id)</span></p> %>
       <p class="card-text"><span class="text-dark"><%= portfolio_item.title  %></span></p>
