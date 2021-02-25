@@ -1,11 +1,9 @@
 <div class="container portfolio-container">
     <div class="row">
         <div class="col-md-7">
-        <%#check_img(@portfolios_items) %>
-        <%# image_tag(@img,  class: "pimage") %>
-        <%= image_tag(@portfolios_items.portfolio_image,class: "pimage" ) if @portfolios_items.portfolio_image.attached?
-        || image_tag('mypic.png')
-        %>
+        <%check_img(@portfolios_items) %>
+        <%= image_tag(@img,  class: "pimage") %>
+        <%# image_tag(@portfolios_items.portfolio_image,class: "pimage" ) if @portfolios_items.portfolio_image.attached? %>
         
          </div>
             <div class="col-md-5">
